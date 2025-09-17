@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mineableendportalframe",
+  "version": "${version}",
+  "name": "MineableEndPortalFrame",
+  "description": "Makes end portal frames harvestable and craftable.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mineableendportalframe/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.drtdrc.mineableendportalframe.client.MineableendportalframeClient"
+    ],
+    "main": [
+      "com.drtdrc.mineableendportalframe.Mineableendportalframe"
+    ]
+  },
+  "mixins": [
+    "mineableendportalframe.mixins.json",
+    {
+      "config": "mineableendportalframe.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
