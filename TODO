@@ -1,0 +1,21 @@
+Goal: give more player control of nether and end portals
+
+End portals
+✅ Make end portal frame mineable
+✅ make frame craftable
+    ✅ end stone, obsidian, ender pearl
+- make portal creation sound local, not global
+- make end portal blocks breakable via liquid source block (nether portal does this already)
+- make whole portal break in same way nether portal does
+- remove portal frame orientation requirement
+- remove size and shape limitations (besides being horizontal, which may need to be implemented because it's vanilla behavior is weird)
+- add air block requirement for portal creation to prevent griefing abuse
+    - make sure this doesn't affect natural gen
+
+Nether portals
+- Make crying obsidian a valid frame block
+- allow frame to be removed and not break portal (end portal does this already)
+- remove size and shape limitations (besides being vertical)
+
+Other
+- find a resource pack that renders portal block sides with portal textures, or implement server-side if possible

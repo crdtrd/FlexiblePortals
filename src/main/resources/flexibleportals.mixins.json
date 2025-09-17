@@ -1,9 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.drtdrc.mineableendportalframe.mixin",
+  "package": "com.drtdrc.flexibleportals.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BlocksMixin",
+    "ServerPlayerInteractionManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

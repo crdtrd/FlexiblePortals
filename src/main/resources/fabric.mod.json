@@ -1,21 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "mineableendportalframe",
+  "id": "flexibleportals",
   "version": "${version}",
-  "name": "MineableEndPortalFrame",
-  "description": "Makes end portal frames harvestable and craftable, completely server-side!",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
-  "icon": "assets/mineableendportalframe/icon.png",
+  "name": "FlexiblePortals",
+  "description": "Let's you do more things with portals! Completely server-side!",
+  "authors": ["crdtrd"],
+  "contact": {
+    "issues": "https://github.com/crdtrd/FlexiblePortals/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/flexibleportals/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.drtdrc.mineableendportalframe.MineableEndPortalFrame"
+      "com.drtdrc.flexibleportals.FlexiblePortals"
+    ],
+    "fabric-datagen": [
+      "com.drtdrc.flexibleportals.datagen.FlexiblePortalsDataGenerator"
     ]
   },
   "mixins": [
-    "mineableendportalframe.mixins.json"
+    "flexibleportals.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
