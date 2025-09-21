@@ -4,8 +4,15 @@
   "package": "com.drtdrc.flexibleportals.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AbstractFireBlockMixin",
     "BlocksMixin",
-    "ServerPlayerInteractionManagerMixin"
+    "BucketItemMixin",
+    "EnderEyeItemMixin",
+    "FlowableFluidMixin",
+    "NetherPortalBlockMixin",
+    "NetherPortalMixin",
+    "ServerPlayerInteractionManagerMixin",
+    "ServerWorldMixin"
   ],
   "injectors": {
     "defaultRequire": 1

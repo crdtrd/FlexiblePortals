@@ -47,7 +47,7 @@ public class BlocksMixin {
 
         if (key.getValue().toString().contentEquals("minecraft:nether_portal")) {
 
-            AbstractBlock.Settings newBlockSettings = AbstractBlock.Settings.create().noCollision().ticksRandomly().strength(-1.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).dropsNothing().pistonBehavior(PistonBehavior.BLOCK);
+            AbstractBlock.Settings newBlockSettings = AbstractBlock.Settings.create().noCollision().ticksRandomly().strength(-1.0f, 3600000.0f).sounds(BlockSoundGroup.GLASS).luminance(state -> 11).dropsNothing().pistonBehavior(PistonBehavior.BLOCK);
 
             Block block = factory.apply(newBlockSettings.registryKey(key));
             cir.setReturnValue(Registry.register(Registries.BLOCK, key, block));
