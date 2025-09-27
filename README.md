@@ -1,4 +1,4 @@
-# MineableEndPortalFrame
+# FlexiblePortals
 ## Summary
 Unlocks the full potential of the art of portal-making!
 ## Features
