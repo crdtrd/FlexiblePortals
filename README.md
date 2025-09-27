@@ -11,5 +11,5 @@ Unlocks the full potential of the art of portal-making!
 ## Requirements
 - [Fabric API](https://modrinth.com/mod/fabric-api)
 ## Demo
-[nether portal demo](https://github.com/crdtrd/FlexiblePortals/blob/master/showcase/netherportal.gif)\
-[end portal demo](https://github.com/crdtrd/FlexiblePortals/blob/master/showcase/endportal.gif)
+![nether portal demo](https://github.com/crdtrd/FlexiblePortals/blob/dev/showcase/netherportal.gif)\
+![end portal demo](https://github.com/crdtrd/FlexiblePortals/blob/dev/showcase/endportal.gif)
