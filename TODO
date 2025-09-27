@@ -17,9 +17,8 @@ End portals
 Nether portals
 ✅ Make crying obsidian a valid frame block
 ✅ allow frame to be removed and not break portal (end portal does this already)
-    ✅ ensure is still breakable via explosion and fluid source block
-- remove size and shape limitations (besides being vertical)
+    ✅ ensure is still breakable via fluid source block
+✅ remove size and shape limitations (besides being vertical)
 
 Other
-- find a resource pack that renders portal block sides with portal textures, or implement server-side if possible
-- if possible make portals able to be horizontal and vertical, upside down or right side up
+✅ Add frame as valid interior block, but don't allow to be removed

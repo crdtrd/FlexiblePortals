@@ -18,7 +18,7 @@ public class ServerWorldMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private void portalsLocal$endPortalOpenedLocal(int eventId, BlockPos pos, int data, CallbackInfo ci) {
+    private void endPortalOpenedLocal(int eventId, BlockPos pos, int data, CallbackInfo ci) {
         if (eventId == WorldEvents.END_PORTAL_OPENED) {
             ServerWorld self = (ServerWorld) (Object) this;
 

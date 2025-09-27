@@ -8,7 +8,6 @@ import net.minecraft.block.EndPortalFrameBlock;
 import net.minecraft.item.EnderEyeItem;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -19,8 +18,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.drtdrc.flexibleportals.PortalsUtil.END_EYED_FRAME;
-import static com.drtdrc.flexibleportals.PortalsUtil.createFreeformPortal;
 
 @Mixin(EnderEyeItem.class)
 public class EnderEyeItemMixin {
@@ -48,7 +45,7 @@ public class EnderEyeItemMixin {
         context.getStack().decrement(1);
         world.syncWorldEvent(WorldEvents.END_PORTAL_FRAME_FILLED, blockPos, 0);
 
-        createFreeformPortal((ServerWorld) world, blockPos, Blocks.END_PORTAL, PortalsUtil.Plane.HORIZONTAL, END_EYED_FRAME, SoundEvents.BLOCK_END_PORTAL_SPAWN);
+        PortalsUtil.findAndCreate((ServerWorld) world, blockPos, PortalsUtil.PortalSpec.end(), SoundEvents.BLOCK_END_PORTAL_SPAWN);
 
         cir.setReturnValue(ActionResult.SUCCESS);
     }
