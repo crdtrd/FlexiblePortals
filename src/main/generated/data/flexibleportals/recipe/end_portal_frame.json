@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "e": "minecraft:end_stone",
+    "o": "minecraft:obsidian",
+    "p": "minecraft:ender_pearl"
+  },
+  "pattern": [
+    "ppp",
+    "eoe",
+    "eee"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:end_portal_frame"
+  }
+}

@@ -1,6 +1,7 @@
 plugins {
     id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'maven-publish'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 version = project.mod_version
@@ -16,11 +17,15 @@ loom {
     mods {
         "mineableendportalframe" {
             sourceSet sourceSets.main
-            sourceSet sourceSets.client
         }
     }
 }
 
+fabricApi {
+    configureDataGeneration() {
+        // server side only
+    }
+}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -97,4 +102,18 @@ publishing {
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
     }
+}
+
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "flexibleportals"
+    versionNumber = project.mod_version
+    versionType = "release"
+    uploadFile = remapJar
+    gameVersions = [project.minecraft_version]
+    loaders = ["fabric"]
+    dependencies {
+        required.project "fabric-api"
+    }
+    syncBodyFrom = rootProject.file("README.md").text
 }
