@@ -103,7 +103,7 @@ public abstract class ServerPlayerInteractionManagerMixin {
 
         // recalc exactly what vanilla did:
         int ticks = this.tickCounter - startTime;
-        float f = state.calcBlockBreakingDelta(this.player, this.player.getWorld(), pos) * (ticks + 1);
+        float f = state.calcBlockBreakingDelta(this.player, this.player.getEntityWorld(), pos) * (ticks + 1);
         int stage = (int)(f * 10.0f);
 
         // send the crack‐stage packet back to the breaker themselves, every tick

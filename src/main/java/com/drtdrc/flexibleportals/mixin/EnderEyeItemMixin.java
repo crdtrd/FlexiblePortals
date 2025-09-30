@@ -34,7 +34,7 @@ public class EnderEyeItemMixin {
             cir.setReturnValue(ActionResult.PASS);
             return;
         }
-        if (world.isClient) {
+        if (world.isClient()) {
             cir.setReturnValue(ActionResult.SUCCESS);
             return;
         }
